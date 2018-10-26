@@ -1,0 +1,36 @@
+body{
+    background-color:wheat;
+}
+#mainNav{
+    background-color:Black;
+    border-bottom-left-radius:25px;
+}
+#dBrand{
+    color:white;
+    background-color:royalblue;
+    border-bottom-left-radius:25px;
+}
+#contentBlock{
+    background-color: white;
+    max-width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:25px;
+    padding:20px 25px 20px 25px;
+    margin-bottom:20px;
+}
+#fitImg{
+    max-width:50%;
+    max-height:50%;
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#fitImg:hover {
+    -webkit-filter: grayscale(0);
+    filter: none;
+  }

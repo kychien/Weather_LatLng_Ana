@@ -1,66 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Latitude Weather Analysis</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Latitude Weather Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" id="mainNav">
         <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand">Weather Latitude</a>
-          </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand" id="dBrand">Weather Latitude</a>
+            </div>
       
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Summary<span class="sr-only">(current)</span></a></li>
-              <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-              </li>
-              <li><a href="#">Comparison</a></li>
-              <li><a href="#">Data</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Summary<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Vs. Cloudiness</a></li>
+                            <li><a href="#">Vs. Humidity</a></li>
+                            <li><a href="#">Vs. Temperature</a></li>
+                            <!-- <li role="separator" class="divider"></li> -->
+                            <li><a href="#">Vs. Wind Speed</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Comparison</a></li>
+                    <li><a href="#">Data</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-      </nav>
+    </nav>
 
-  <!-- Main Content -->
-  <div class="container-fluid">
-    <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
-        <h1>Compared to:</h1>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie malesuada eros, ut blandit mi tristique a. Nam id velit quis dolor facilisis volutpat nec sit amet ipsum. Fusce non justo nec felis fringilla imperdiet. Aliquam nec magna quis mauris gravida feugiat. Aliquam risus massa, egestas eu ante sed, tempus sollicitudin dui. Donec sodales nec quam at suscipit. Mauris in elementum lorem. </p>
-        <hr>
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+            <div class="row">
+                <div class="hidden-xs hidden-sm col-md-11 col-lg-11" id="contentBlock">
+                    <h1>Compared to:</h1>
+                    <hr>
+                    <div class="row">
+                        <h4>- Cloudiness</h4>
+                        <img src="./Output/Latitude vs. Clouds of 704 cities on 2018-09-28.png" id="fitImg">
+                    </div>
+                    <div class="row">
+                        <h4>- Humidity</h4>
+                        <img src="./Output/Latitude vs. Humidity of 704 cities on 2018-09-28.png" id="fitImg">
+                    </div>
+                    <div class="row">
+                        <h4>- Temperature</h4>
+                        <img src="./Output/Latitude vs. Temperature of 704 cities on 2018-09-28 alt.png" id="fitImg">
+                </div>
+                <div class="row">
+                    <h4>- Wind Speed</h4>
+                    <img src="./Output/Latitude vs. Wind Speed of 704 cities on 2018-09-28.png" id="fitImg">
+                </div>
+                <hr>
+            </div>
+        </div>
     </div>
     <div class="col-sm-12 col-md-9 col-lg-9">
-        <h1>Weather Latitude Analysis - Summary:</h1>
-        <hr>
-        <h3>Subtitle</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie malesuada eros, ut blandit mi tristique a. Nam id velit quis dolor facilisis volutpat nec sit amet ipsum. Fusce non justo nec felis fringilla imperdiet. Aliquam nec magna quis mauris gravida feugiat. Aliquam risus massa, egestas eu ante sed, tempus sollicitudin dui. Donec sodales nec quam at suscipit. Mauris in elementum lorem. </p>
-        <hr>
+        <div class="row">
+            <div class="col-sm-12 col-md-9 col-lg 7" id="contentBlock">
+                <h1>Weather Latitude Analysis</h1>
+                <hr>
+                <img src="./Output/Latitude vs. Max. Temperature of 611 cities on 2018-09-28 Alt.png" align="right">
+                <h3>Overview</h3>
+                <p>The purpose of this project was to analyze weather patterns with respect to latitudinal position.  The data was gathered by picking 500+ cities based on random   latitude-longitude pairs and using OpenWeatherMap’s API to build the dataset.</p>
+                <hb>
+                <p>Once assembled, Matplotlib was used to compare the latitudes to various aspects of weather such as cloudiness, humidity, temperature and windspeed.  This site provides both the resulting plots and accompanying observations as well as the source data they are based on.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-sm-12 hidden-md hidden-lg">
-    <h1>Compared to:</h1>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie malesuada eros, ut blandit mi tristique a. Nam id velit quis dolor facilisis volutpat nec sit amet ipsum. Fusce non justo nec felis fringilla imperdiet. Aliquam nec magna quis mauris gravida feugiat. Aliquam risus massa, egestas eu ante sed, tempus sollicitudin dui. Donec sodales nec quam at suscipit. Mauris in elementum lorem. </p>
-    <hr>
-</div>
+
+    <div class="col-sm-12 hidden-md hidden-lg" >
+        <div class="row">
+            <div class="col-sm-12 col-md-11 col-lg-11" id="contentBlock">
+                <h1>Compared to:</h1>
+                <hr>
+                <div class="row">
+                    <h4>- Cloudiness</h4>
+                    <img src="./Output/Latitude vs. Clouds of 704 cities on 2018-09-28.png" id="fitImg">
+                </div>
+                <div class="row">
+                    <h4>- Humidity</h4>
+                    <img src="./Output/Latitude vs. Humidity of 704 cities on 2018-09-28.png" id="fitImg">
+                </div>
+                <div class="row">
+                    <h4>- Temperature</h4>
+                    <img src="./Output/Latitude vs. Temperature of 704 cities on 2018-09-28 alt.png" id="fitImg">
+                </div>
+                <div class="row">
+                    <h4>- Wind Speed</h4>
+                    <img src="./Output/Latitude vs. Wind Speed of 704 cities on 2018-09-28.png" id="fitImg">
+                </div>
+            </div>
+        </div>
+    </div>
   <!--latest jQuery-->
   <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
   <!-- Latest compiled and minified JavaScript -->
