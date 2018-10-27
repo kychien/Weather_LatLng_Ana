@@ -22,19 +22,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Summary<span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a>Summary<span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Vs. Cloudiness</a></li>
-                            <li><a href="#">Vs. Humidity</a></li>
-                            <li><a href="#">Vs. Temperature</a></li>
+                            <li><a href="./VC.html">Vs. Cloudiness</a></li>
+                            <li><a href="./VH.html">Vs. Humidity</a></li>
+                            <li><a href="./VT.html">Vs. Temperature</a></li>
                             <!-- <li role="separator" class="divider"></li> -->
-                            <li><a href="#">Vs. Wind Speed</a></li>
+                            <li><a href="./VW.html">Vs. Wind Speed</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Comparison</a></li>
-                    <li><a href="#">Data</a></li>
+                    <li><a href="./comp.html">Comparison</a></li>
+                    <li><a href="./data.html">Data</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -42,51 +42,64 @@
 
     <!-- Main Content -->
     <div class="container-fluid">
-        <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+        <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
             <div class="row">
                 <div class="hidden-xs hidden-sm col-md-11 col-lg-11" id="contentBlock">
-                    <h1>Compared to:</h1>
+                    <h3><a href="comp.html">Comparisons:</a></h3>
                     <hr>
                     <div class="row">
+                        <a href="./VC.html">
                         <h4>- Cloudiness</h4>
                         <img src="./Output/Latitude vs. Clouds of 704 cities on 2018-09-28.png" id="fitImg">
+                        </a>
                     </div>
                     <div class="row">
+                        <a href="./VH.html">
                         <h4>- Humidity</h4>
                         <img src="./Output/Latitude vs. Humidity of 704 cities on 2018-09-28.png" id="fitImg">
+                        </a>
                     </div>
                     <div class="row">
+                        <a href="./VT.html">
                         <h4>- Temperature</h4>
                         <img src="./Output/Latitude vs. Temperature of 704 cities on 2018-09-28 alt.png" id="fitImg">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="./VW.html">
+                        <h4>- Wind Speed</h4>
+                        <img src="./Output/Latitude vs. Wind Speed of 704 cities on 2018-09-28.png" id="fitImg">
+                        </a>
+                    </div>
+                    <hr>
+                </div><!-- column close-->
+            </div><!-- row close-->
+        </div><!-- column close-->
+    
+        <div class="col-sm-12 col-md-9 col-lg-9">
+            <div class="row">
+                <div class="col-sm-12 col-md-9 col-lg 7" id="contentBlock">
+                    <h1>Weather Latitude Analysis</h1>
+                    <hr>
+                    <img src="./Output/Latitude vs. Max. Temperature of 704 cities on 2018-09-28 Alt.png" align="right">
+                    <h3>Overview</h3>
+                    <p>The purpose of this project was to analyze weather patterns with respect to latitudinal position. The
+                    data was gathered by picking 500+ cities based on random latitude-longitude pairs and using
+                    OpenWeatherMap’s API to build the dataset.</p>
+                    <hb>
+                    <p>Once assembled, Matplotlib was used to compare the latitudes to various aspects of weather such as
+                        cloudiness, humidity, temperature and windspeed. This site provides both the resulting plots and
+                        accompanying observations as well as the source data they are based on.
+                    </p>
                 </div>
-                <div class="row">
-                    <h4>- Wind Speed</h4>
-                    <img src="./Output/Latitude vs. Wind Speed of 704 cities on 2018-09-28.png" id="fitImg">
-                </div>
-                <hr>
             </div>
         </div>
-    </div>
-    <div class="col-sm-12 col-md-9 col-lg-9">
-        <div class="row">
-            <div class="col-sm-12 col-md-9 col-lg 7" id="contentBlock">
-                <h1>Weather Latitude Analysis</h1>
-                <hr>
-                <img src="./Output/Latitude vs. Max. Temperature of 611 cities on 2018-09-28 Alt.png" align="right">
-                <h3>Overview</h3>
-                <p>The purpose of this project was to analyze weather patterns with respect to latitudinal position.  The data was gathered by picking 500+ cities based on random   latitude-longitude pairs and using OpenWeatherMap’s API to build the dataset.</p>
-                <hb>
-                <p>Once assembled, Matplotlib was used to compare the latitudes to various aspects of weather such as cloudiness, humidity, temperature and windspeed.  This site provides both the resulting plots and accompanying observations as well as the source data they are based on.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 hidden-md hidden-lg" >
-        <div class="row">
-            <div class="col-sm-12 col-md-11 col-lg-11" id="contentBlock">
-                <h1>Compared to:</h1>
-                <hr>
+    
+        <div class="col-sm-12 hidden-md hidden-lg">
+            <div class="row">
+                <div class="col-sm-12 col-md-11 col-lg-11" id="contentBlock">
+                    <h1>Compared to:</h1>
+                    <hr>
                 <div class="row">
                     <h4>- Cloudiness</h4>
                     <img src="./Output/Latitude vs. Clouds of 704 cities on 2018-09-28.png" id="fitImg">
