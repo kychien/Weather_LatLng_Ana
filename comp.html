@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latitude Weather Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-default" id="mainNav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            <a href="./index.html" class="navbar-brand" id="dBrand">Weather Latitude</a>
+            </div>
+      
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./index.html">Summary<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./VC.html">Vs. Cloudiness</a></li>
+                            <li><a href="./VH.html">Vs. Humidity</a></li>
+                            <li><a href="./VT.html">Vs. Temperature</a></li>
+                            <!-- <li role="separator" class="divider"></li> -->
+                            <li><a href="./VW.html">Vs. Wind Speed</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="./comp.html">Comparison</a></li>
+                    <li><a href="./data.html">Data</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="col-xs-12" id="contentBlock">
+            <div class="row">
+                <h1>All Plots:</h1>
+                <hr>
+                <div class="col-sm-12 col-md-6">
+                    <h4>Plots based on <a href="./data.html">included dataset:</a></h4> 
+                    <img src="./Output/Latitude vs. Clouds of 611 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                    <img src="./Output/Latitude vs. Humidity of 611 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                    <img src="./Output/Latitude vs. Wind Speed of 611 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <a onclick="rOnOff()"><h4>Click me or Temperature Plots to turn on/off regression lines:</h4></a>
+                    <img src="./Output/Latitude vs. Min. Temperature of 611 cities on 2018-09-28.png" class="compImg" id="minT" onclick="rOnOff()">
+                    <br>
+                    <img src="./Output/Latitude vs. Temperature of 611 cities on 2018-09-28.png" class="compImg" id="Temp" onclick="rOnOff()">
+                    <br>
+                    <img src="./Output/Latitude vs. Max. Temperature of 611 cities on 2018-09-28.png" class="compImg" id="maxT" onclick="rOnOff()">
+                    <br>
+                </div>
+                <hr>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-xs-12" id="contentBlock">
+            <div class="row">
+                <h4>Plots based on alternative dataset:</h4>
+                <hr>
+                <div class="col-sm-12 col-md-6">
+                    <img src="./Output/Latitude vs. Clouds of 704 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                    <img src="./Output/Latitude vs. Humidity of 704 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                    <img src="./Output/Latitude vs. Wind Speed of 704 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <img src="./Output/Latitude vs. Min. Temperature of 704 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                    <img src="./Output/Latitude vs. Temperature of 704 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                    <img src="./Output/Latitude vs. Max. Temperature of 704 cities on 2018-09-28.png" class="compImg">
+                    <br>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <script>
+        var minT = document.getElementById("minT");
+        var Temp = document.getElementById("Temp");
+        var maxT = document.getElementById("maxT");
+
+        function rOnOff(){
+            if (minT.getAttribute('src') == "./Output/Latitude vs. Min. Temperature of 611 cities on 2018-09-28.png"){
+                minT.src = "./Output/Latitude vs. Min. Temperature of 611 cities on 2018-09-28 alt.png";
+                Temp.src = "./Output/Latitude vs. Temperature of 611 cities on 2018-09-28 alt.png";
+                maxT.src = "./Output/Latitude vs. Max. Temperature of 611 cities on 2018-09-28 alt.png";
+            } else {
+                minT.src = "./Output/Latitude vs. Min. Temperature of 611 cities on 2018-09-28.png";
+                Temp.src = "./Output/Latitude vs. Temperature of 611 cities on 2018-09-28.png";
+                maxT.src = "./Output/Latitude vs. Max. Temperature of 611 cities on 2018-09-28.png";
+            }
+        }
+    </script>
+    <!--latest jQuery-->
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

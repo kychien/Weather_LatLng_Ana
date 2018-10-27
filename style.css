@@ -1,6 +1,12 @@
 body{
     background-color:wheat;
 }
+h1{
+    text-align:center;
+}
+h4{
+    text-align:center;
+}
 #mainNav{
     background-color:Black;
     border-bottom-left-radius:25px;
@@ -52,4 +58,19 @@ body{
 #fitImg:hover {
     -webkit-filter: grayscale(0);
     filter: none;
-  }
+}
+.compImg {
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:65%;
+}
+.limitDisplay{
+    max-height: 700px;
+    width: 90%;
+    overflow: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
